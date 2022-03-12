@@ -1,0 +1,115 @@
+﻿@page "/"
+
+<div class="text-center" @onkeydown="KeyboardEventHandler " @onkeypress=" KeyboardEventHandler " @onkeyup="KeyboardEventHandler ">
+    <h1 class="display-4">WordIe</h1>
+    <p>@currentDateTime</p>
+    <p>@KeyPressed</p>
+    <p>@EventInfo</p>
+    <div>
+        <input id="TextGuess1Char0" type="text" />
+        <input id="TextGuess1Char1" type="text" />
+        <input id="TextGuess1Char2" type="text" />
+        <input id="TextGuess1Char3" type="text" />
+        <input id="TextGuess1Char4" type="text" />
+    </div>
+
+    <div>
+        <input id="TextGuess2Char0" type="text" />
+        <input id="TextGuess2Char1" type="text" />
+        <input id="TextGuess2Char2" type="text" />
+        <input id="TextGuess2Char3" type="text" />
+        <input id="TextGuess2Char4" type="text" />
+    </div>
+
+    <div>
+        <input id="TextGuess3Char0" type="text" />
+        <input id="TextGuess3Char1" type="text" />
+        <input id="TextGuess3Char2" type="text" />
+        <input id="TextGuess3Char3" type="text" />
+        <input id="TextGuess3Char4" type="text" />
+    </div>
+
+    <div>
+        <input id="TextGuess4Char0" type="text" />
+        <input id="TextGuess4Char1" type="text" />
+        <input id="TextGuess4Char2" type="text" />
+        <input id="TextGuess4Char3" type="text" />
+        <input id="TextGuess4Char4" type="text" />
+    </div>
+
+    <div>
+        <input id="TextGuess5Char0" type="text" />
+        <input id="TextGuess5Char1" type="text" />
+        <input id="TextGuess5Char2" type="text" />
+        <input id="TextGuess5Char3" type="text" />
+        <input id="TextGuess5Char4" type="text" />
+    </div>
+
+    <div>
+        <input id="TextGuess6Char0" type="text" />
+        <input id="TextGuess6Char1" type="text" />
+        <input id="TextGuess6Char2" type="text" />
+        <input id="TextGuess6Char3" type="text" />
+        <input id="TextGuess6Char4" type="text" />
+    </div>
+
+    <div>
+        <button id="KeyboardQ">Q</button>
+        <button id="KeyboardW" @onclick="DisplayDate">W</button>
+        <button id="KeyboardE">E</button>
+        <button id="KeyboardR">R</button>
+        <button id="KeyboardT">T</button>
+        <button id="KeyboardY">Y</button>
+        <button id="KeyboardU">U</button>
+        <button id="KeyboardI">I</button>
+        <button id="KeyboardO">O</button>
+        <button id="KeyboardP">P</button>
+        <br />
+        <button id="KeyboardA">A</button>
+        <button id="KeyboardS">S</button>
+        <button id="KeyboardD">D</button>
+        <button id="KeyboardF">F</button>
+        <button id="KeyboardG">G</button>
+        <button id="KeyboardH">H</button>
+        <button id="KeyboardJ">J</button>
+        <button id="KeyboardK">K</button>
+        <button id="KeyboardL">L</button>
+        <br />
+        <button id="KeyboardEnter">Enter</button>
+        <button id="KeyboardZ">Z</button>
+        <button id="KeyboardX">X</button>
+        <button id="KeyboardC">C</button>
+        <button id="KeyboardV">V</button>
+        <button id="KeyboardB">B</button>
+        <button id="KeyboardN">N</button>
+        <button id="KeyboardM">M</button>
+        <button id="KeyboardBackspace">Backspace</button>
+        <button id="KeyboardTest">Test</button>
+    </div>
+</div>
+
+@code {
+
+
+    @*    private ElementReference button1;
+
+        private async void On_Button_Click(ElementReference element)
+        {
+            await JSRuntime.InvokeVoidAsync(Console.WriteLine());
+        }*@
+
+    String currentDateTime;
+
+    private void DisplayDate()
+    {
+        currentDateTime = DateTime.UtcNow.ToString();
+    }
+
+    string KeyPressed = "";
+    string EventInfo = "";
+    private void KeyboardEventHandler(KeyboardEventArgs args)
+    {
+        KeyPressed = "Key Pressed is " + args.Key;
+        EventInfo = "Event Type " + args.Type;
+    }
+}
