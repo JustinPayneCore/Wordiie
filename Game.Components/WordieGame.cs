@@ -97,18 +97,6 @@ namespace Game.Components
             {
                 Console.WriteLine("invalid guess.");
             }
-
-            //// result = ccccc => all correct guesses => game won
-            //if (result == "ccccc")
-            //{
-            //    isCorrect = true;
-            //    isPlaying = false;
-            //} else
-            //{
-            //    Console.WriteLine("Guess Again. result: " + result);
-            //}
-
-            //checkGameState();
         }
 
         public string compareGuessLetterByLetter(string letter, int index, int wordNum)
@@ -143,17 +131,14 @@ namespace Game.Components
 
             if (!isCorrects.Contains(false))
             {
-                // victory screen
-                Console.WriteLine("You won!");
+                isPlaying = false;
+
                 // 1 = win
                 return 1;
             }
 
             if (!isPlaying && isCorrects.Contains(false))
             {
-                // defeat screen
-                Console.WriteLine("You lose!");
-
                 for (int i = 0; i < wordsToGuess; i++)
                 {
                     Console.WriteLine("The Wordie for word " + i + " was " + answers[i]);

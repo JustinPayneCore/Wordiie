@@ -224,7 +224,7 @@ protected async Task EnterPressed()
 
     if (guess.Length == 5 && wordieGame.isPlaying)
     {
-        Console.WriteLine("enter: inputting guess");
+        Console.WriteLine("EnterPressed(): inputting guess");
         wordieGame.makeGuess(guess);
 
         // display result (temporary)
@@ -256,14 +256,13 @@ protected async Task CheckGameState()
 {
     // game state
     int intGameState = wordieGame.checkGameState();
-    Console.WriteLine("gameState: " + intGameState);
 
     // victory
     if (intGameState == 1) {
         guessResult = "You Won!";
         // todo: set up end screen (win)
     } else if (intGameState == -1) {
-        guessResult = "You Lose! The correct words were " + wordieGame.answers;
+        guessResult = "You Lose! The correct word was " + wordieGame.answers[0];
         // todo: set up end screen (lose)
     }
 
@@ -317,12 +316,6 @@ private void ChangeBackground(int resultIndex, int wordToGuess) {
 
     // change background of keyboard letter
     string keyboard_id = "keyboard-" + resultLetter;
-
-    @*Button keyboard_btn = document.getElementById(keyboard_id);
-    keyboard_btn.class = newClassBackground;*@
-
-    Console.WriteLine(resultLetter);
-    Console.WriteLine(newClassBackground);
 
 
     switch (guessRow)
