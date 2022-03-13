@@ -1,28 +1,65 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+}
+
+.docRef {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: -25px;
+    outline: 0px solid transparent;
 }
 
 a, .btn-link {
     color: #0366d6;
 }
 
-    a.green {
-        color: #6aaa64;
-    }
+.green {
+    color: #6aaa64;
+}
 
-    a.yellow {
-        color: #c9b458;
-    }
+.yellow {
+    color: #c9b458;
+}
+.grey-lightmode {
+    color: #d3d6da;
+}
+.grey {
+    color: #787c7e;
+}
+.grey-darkmode {
+    color: #3a3a3c;
+}
 
-    a.grey-lightmode {
-        color: #787c7e;
-    }
+.background-letter {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+}
 
-    a.grey-darkmode {
-        color: #3a3a3c;
-    }
+.background-green {
+    background-color: #6aaa64;
+}
+
+.background-yellow {
+    background-color: #c9b458;
+}
+
+.background-lightgrey {
+    background-color: #d3d6da;
+}
+
+.background-grey {
+    background-color: #787c7e;
+}
+
+.background-darkgrey {
+    background-color: #3a3a3c;
+}
 
 .btn-primary {
     color: #fff;
