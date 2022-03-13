@@ -2,7 +2,7 @@
 
 <div class="text-center" tabindex="0" @ref="docRef" @onkeydown=" KeyboardEventHandler ">
     <h1 class="display-4">WordIe</h1>
-    <p>@guessResult</p>
+    <p id="guessResult">@guessResult</p>
 
     @foreach (var item in attemptedGuesses)
     {
@@ -15,53 +15,60 @@
     </div>
 
     @*<div>
-        <p id="Attempt2">_____</p>
-        <p id="Attempt3">_____</p>
-        <p id="Attempt4">_____</p>
-        <p id="Attempt5">_____</p>
-        <p id="Attempt6">_____</p>
-    </div>*@
-
-
-    @*<div>
-            <span id="TextGuess2Char0" type="text"> @KeyPressed </span>
-            <span id="TextGuess2Char1" type="text"> @KeyPressed </span>
-            <span id="TextGuess2Char2" type="text"> @KeyPressed </span>
-            <span id="TextGuess2Char3" type="text"> @KeyPressed </span>
-            <span id="TextGuess2Char4" type="text"> @KeyPressed </span>
-        </div>
-
-        <div>
-            <span id="TextGuess3Char0" type="text"> @KeyPressed </span>
-            <span id="TextGuess3Char1" type="text"> @KeyPressed </span>
-            <span id="TextGuess3Char2" type="text"> @KeyPressed </span>
-            <span id="TextGuess3Char3" type="text"> @KeyPressed </span>
-            <span id="TextGuess3Char4" type="text"> @KeyPressed </span>
-        </div>
-
-        <div>
-            <span id="TextGuess4Char0" type="text"> @KeyPressed </span>
-            <span id="TextGuess4Char1" type="text"> @KeyPressed </span>
-            <span id="TextGuess4Char2" type="text"> @KeyPressed </span>
-            <span id="TextGuess4Char3" type="text"> @KeyPressed </span>
-            <span id="TextGuess4Char4" type="text"> @KeyPressed </span>
-        </div>
-
-        <div>
-            <span id="TextGuess5Char0" type="text"> @KeyPressed </span>
-            <span id="TextGuess5Char1" type="text"> @KeyPressed </span>
-            <span id="TextGuess5Char2" type="text"> @KeyPressed </span>
-            <span id="TextGuess5Char3" type="text"> @KeyPressed </span>
-            <span id="TextGuess5Char4" type="text"> @KeyPressed </span>
-        </div>
-
-        <div>
-            <span id="TextGuess6Char0" type="text"> @KeyPressed </span>
-            <span id="TextGuess6Char1" type="text"> @KeyPressed </span>
-            <span id="TextGuess6Char2" type="text"> @KeyPressed </span>
-            <span id="TextGuess6Char3" type="text"> @KeyPressed </span>
-            <span id="TextGuess6Char4" type="text"> @KeyPressed </span>
+            <p id="Attempt2">_____</p>
+            <p id="Attempt3">_____</p>
+            <p id="Attempt4">_____</p>
+            <p id="Attempt5">_____</p>
+            <p id="Attempt6">_____</p>
         </div>*@
+
+    <div>
+        <span id="TextGuess0Char0" type="text"> @g0c0 </span>
+        <span id="TextGuess0Char1" type="text"> @g0c1 </span>
+        <span id="TextGuess0Char2" type="text"> @g0c2 </span>
+        <span id="TextGuess0Char3" type="text"> @g0c3 </span>
+        <span id="TextGuess0Char4" type="text"> @g0c4 </span>
+    </div>
+
+    <div>
+        <span id="TextGuess1Char0" type="text"> @g1c0 </span>
+        <span id="TextGuess1Char1" type="text"> @g1c1 </span>
+        <span id="TextGuess1Char2" type="text"> @g1c2 </span>
+        <span id="TextGuess1Char3" type="text"> @g1c3 </span>
+        <span id="TextGuess1Char4" type="text"> @g1c4 </span>
+    </div>
+
+    <div>
+        <span id="TextGuess2Char0" type="text"> @g2c0 </span>
+        <span id="TextGuess2Char1" type="text"> @g2c1 </span>
+        <span id="TextGuess2Char2" type="text"> @g2c2 </span>
+        <span id="TextGuess2Char3" type="text"> @g2c3 </span>
+        <span id="TextGuess2Char4" type="text"> @g2c4 </span>
+    </div>
+
+    <div>
+        <span id="TextGuess3Char0" type="text"> @g3c0 </span>
+        <span id="TextGuess3Char1" type="text"> @g3c1 </span>
+        <span id="TextGuess3Char2" type="text"> @g3c2 </span>
+        <span id="TextGuess3Char3" type="text"> @g3c3 </span>
+        <span id="TextGuess3Char4" type="text"> @g3c4 </span>
+    </div>
+
+    <div>
+        <span id="TextGuess4Char0" type="text"> @g4c0 </span>
+        <span id="TextGuess4Char1" type="text"> @g4c1 </span>
+        <span id="TextGuess4Char2" type="text"> @g4c2 </span>
+        <span id="TextGuess4Char3" type="text"> @g4c3 </span>
+        <span id="TextGuess4Char4" type="text"> @g4c4 </span>
+    </div>                 
+
+    <div>
+        <span id="TextGuess5Char0" type="text"> @g5c0 </span>
+        <span id="TextGuess5Char1" type="text"> @g5c1 </span>
+        <span id="TextGuess5Char2" type="text"> @g5c2 </span>
+        <span id="TextGuess5Char3" type="text"> @g5c3 </span>
+        <span id="TextGuess5Char4" type="text"> @g5c4 </span>
+    </div>                 
 
     <div>
         @foreach (var i in keyboard_toprow)
@@ -100,6 +107,16 @@
     string guess = "";
     string guessResult = "";
 
+    string g0c0, g0c1, g0c2, g0c3, g0c4,
+        g1c0, g1c1, g1c2, g1c3, g1c4,
+        g2c0, g2c1, g2c2, g2c3, g2c4,
+        g3c0, g3c1, g3c2, g3c3, g3c4,
+        g4c0, g4c1, g4c2, g4c3, g4c4,
+        g5c0, g5c1, g5c2, g5c3, g5c4;
+
+    int guessRow = 0;
+    int guessCol = 0;
+
     ArrayList attemptedGuesses = new ArrayList();
 
     int[] keyboard_toprow = new int[] { 113, 119, 101, 114, 116, 121, 117, 105, 111, 112 };
@@ -129,6 +146,13 @@
             if (isLetter && guess.Length < 5)
             {
                 guess += letter;
+
+                ChangeLetter(letter.ToString());
+                if (guessCol < 5)
+                {
+                    guessCol++;
+                }
+
             }
 
             Console.WriteLine(guess);
@@ -149,6 +173,13 @@
         if (guess.Length < 5 && wordieGame.isPlaying)
         {
             guess += letter;
+
+            ChangeLetter(letter.ToString());
+
+            if (guessCol < 5)
+            {
+                guessCol++;
+            }
             Console.WriteLine(guess);
         }
 
@@ -173,6 +204,9 @@
                 // reset guess
                 guess = "";
 
+                guessRow++;
+                guessCol = 0;
+
                 CheckGameState();
             }
         }
@@ -191,7 +225,6 @@
             // todo: set up end screen (lose)
         }
 
-
     }
 
 
@@ -201,7 +234,146 @@
         if (guess.Length > 0)
         {
             guess = guess.Substring(0, guess.Length - 1);
+
+            guessCol--;
+
+            string letter = "";
+            ChangeLetter(letter);
+
             Console.WriteLine(guess);
         }
     }
+
+    private void ChangeLetter(string letter)
+    {
+        switch (guessRow)
+        {
+            case 0:
+                switch (guessCol)
+                {
+                    case 0:
+                        g0c0 = letter;
+                        break;
+                    case 1:
+                        g0c1 = letter;
+                        break;
+                    case 2:
+                        g0c2 = letter;
+                        break;
+                    case 3:
+                        g0c3 = letter;
+                        break;
+                    default:
+                        g0c4 = letter;
+                        break;
+                }
+                break;
+
+            case 1:
+                switch (guessCol)
+                {
+                    case 0:
+                        g1c0 = letter;
+                        break;
+                    case 1:
+                        g1c1 = letter;
+                        break;
+                    case 2:
+                        g1c2 = letter;
+                        break;
+                    case 3:
+                        g1c3 = letter;
+                        break;
+                    default:
+                        g1c4 = letter;
+                        break;
+                }
+                break;
+
+            case 2:
+                switch (guessCol)
+                {
+                    case 0:
+                        g2c0 = letter;
+                        break;
+                    case 1:
+                        g2c1 = letter;
+                        break;
+                    case 2:
+                        g2c2 = letter;
+                        break;
+                    case 3:
+                        g2c3 = letter;
+                        break;
+                    default:
+                        g2c4 = letter;
+                        break;
+                }
+                break;
+
+            case 3:
+                switch (guessCol)
+                {
+                    case 0:
+                        g3c0 = letter;
+                        break;
+                    case 1:
+                        g3c1 = letter;
+                        break;
+                    case 2:
+                        g3c2 = letter;
+                        break;
+                    case 3:
+                        g3c3 = letter;
+                        break;
+                    default:
+                        g3c4 = letter;
+                        break;
+                }
+                break;
+
+            case 4:
+                switch (guessCol)
+                {
+                    case 0:
+                        g4c0 = letter;
+                        break;
+                    case 1:
+                        g4c1 = letter;
+                        break;
+                    case 2:
+                        g4c2 = letter;
+                        break;
+                    case 3:
+                        g4c3 = letter;
+                        break;
+                    default:
+                        g4c4 = letter;
+                        break;
+                }
+                break;
+
+            default:
+                switch (guessCol)
+                {
+                    case 0:
+                        g5c0 = letter;
+                        break;
+                    case 1:
+                        g5c1 = letter;
+                        break;
+                    case 2:
+                        g5c2 = letter;
+                        break;
+                    case 3:
+                        g5c3 = letter;
+                        break;
+                    default:
+                        g5c4 = letter;
+                        break;
+                }
+                break;
+        }
+    }
+
 }

@@ -41,7 +41,7 @@ namespace Game.Components
             // create game board based on number of words to guess
             for (int i = 0; i < wordsToGuess; i++)
             {
-                int randomIndex = random.Next(possible_answers.Count + 1);
+                int randomIndex = random.Next(possible_answers.Count);
 
                 // todo: uncomment later if expanding wordie to more words
                 //answers.Add((string) possible_answers[randomIndex]);
@@ -68,12 +68,11 @@ namespace Game.Components
 
                         Console.WriteLine(result);
                     }
+                attempts--;
             } else
             {
                 Console.WriteLine("invalid guess.");
             }
-
-            attempts--;
 
             // result = ccccc => all correct guesses => game won
             if (result == "ccccc")

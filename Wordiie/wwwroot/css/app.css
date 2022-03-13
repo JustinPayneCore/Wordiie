@@ -8,6 +8,22 @@ a, .btn-link {
     color: #0366d6;
 }
 
+    a.green {
+        color: #6aaa64;
+    }
+
+    a.yellow {
+        color: #c9b458;
+    }
+
+    a.grey-lightmode {
+        color: #787c7e;
+    }
+
+    a.grey-darkmode {
+        color: #3a3a3c;
+    }
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
