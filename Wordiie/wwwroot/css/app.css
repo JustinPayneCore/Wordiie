@@ -2,7 +2,6 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: black
 }
 
 a, .btn-link {
@@ -64,5 +63,9 @@ a, .btn-link {
 
 .keyboard {
     margin: 1px;
+}
+
+.text-center {
+    background-color: orange;
 }
 
