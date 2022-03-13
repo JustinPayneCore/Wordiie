@@ -1,55 +1,54 @@
 ﻿@page "/"
 
-    <div class="text-center" tabindex="0" @ref="docRef" @onkeydown="KeyboardEventHandler " @onkeypress=" KeyboardEventHandler " @onkeyup="KeyboardEventHandler ">
+    <div class="text-center" tabindex="0" @ref="docRef" @onkeydown=" KeyboardEventHandler ">
         <h1 class="display-4">WordIe</h1>
         <p>@KeyPressed</p>
-        <p>@EventInfo</p>
         <div>
-            <input id="TextGuess1Char0" type="text" />
-            <input id="TextGuess1Char1" type="text" />
-            <input id="TextGuess1Char2" type="text" />
-            <input id="TextGuess1Char3" type="text" />
-            <input id="TextGuess1Char4" type="text" />
+            <span id="TextGuess1Char0" type="text"> @KeyPressed </span>
+            <span id="TextGuess1Char1" type="text"> @KeyPressed </span>
+            <span id="TextGuess1Char2" type="text"> @KeyPressed </span>
+            <span id="TextGuess1Char3" type="text"> @KeyPressed </span>
+            <span id="TextGuess1Char4" type="text"> @KeyPressed </span>
         </div>
 
         <div>
-            <input id="TextGuess2Char0" type="text" />
-            <input id="TextGuess2Char1" type="text" />
-            <input id="TextGuess2Char2" type="text" />
-            <input id="TextGuess2Char3" type="text" />
-            <input id="TextGuess2Char4" type="text" />
+            <span id="TextGuess2Char0" type="text"> @KeyPressed </span>
+            <span id="TextGuess2Char1" type="text"> @KeyPressed </span>
+            <span id="TextGuess2Char2" type="text"> @KeyPressed </span>
+            <span id="TextGuess2Char3" type="text"> @KeyPressed </span>
+            <span id="TextGuess2Char4" type="text"> @KeyPressed </span>
         </div>
 
         <div>
-            <input id="TextGuess3Char0" type="text" />
-            <input id="TextGuess3Char1" type="text" />
-            <input id="TextGuess3Char2" type="text" />
-            <input id="TextGuess3Char3" type="text" />
-            <input id="TextGuess3Char4" type="text" />
+            <span id="TextGuess3Char0" type="text"> @KeyPressed </span>
+            <span id="TextGuess3Char1" type="text"> @KeyPressed </span>
+            <span id="TextGuess3Char2" type="text"> @KeyPressed </span>
+            <span id="TextGuess3Char3" type="text"> @KeyPressed </span>
+            <span id="TextGuess3Char4" type="text"> @KeyPressed </span>
         </div>
 
         <div>
-            <input id="TextGuess4Char0" type="text" />
-            <input id="TextGuess4Char1" type="text" />
-            <input id="TextGuess4Char2" type="text" />
-            <input id="TextGuess4Char3" type="text" />
-            <input id="TextGuess4Char4" type="text" />
+            <span id="TextGuess4Char0" type="text"> @KeyPressed </span>
+            <span id="TextGuess4Char1" type="text"> @KeyPressed </span>
+            <span id="TextGuess4Char2" type="text"> @KeyPressed </span>
+            <span id="TextGuess4Char3" type="text"> @KeyPressed </span>
+            <span id="TextGuess4Char4" type="text"> @KeyPressed </span>
         </div>
 
         <div>
-            <input id="TextGuess5Char0" type="text" />
-            <input id="TextGuess5Char1" type="text" />
-            <input id="TextGuess5Char2" type="text" />
-            <input id="TextGuess5Char3" type="text" />
-            <input id="TextGuess5Char4" type="text" />
+            <span id="TextGuess5Char0" type="text"> @KeyPressed </span>
+            <span id="TextGuess5Char1" type="text"> @KeyPressed </span>
+            <span id="TextGuess5Char2" type="text"> @KeyPressed </span>
+            <span id="TextGuess5Char3" type="text"> @KeyPressed </span>
+            <span id="TextGuess5Char4" type="text"> @KeyPressed </span>
         </div>
 
         <div>
-            <input id="TextGuess6Char0" type="text" />
-            <input id="TextGuess6Char1" type="text" />
-            <input id="TextGuess6Char2" type="text" />
-            <input id="TextGuess6Char3" type="text" />
-            <input id="TextGuess6Char4" type="text" />
+            <span id="TextGuess6Char0" type="text"> @KeyPressed </span>
+            <span id="TextGuess6Char1" type="text"> @KeyPressed </span>
+            <span id="TextGuess6Char2" type="text"> @KeyPressed </span>
+            <span id="TextGuess6Char3" type="text"> @KeyPressed </span>
+            <span id="TextGuess6Char4" type="text"> @KeyPressed </span>
         </div>
 
         <div>
@@ -80,17 +79,19 @@
         </div>
     </div>
 
-    @code {
+@code {
 
     protected ElementReference myDiv;  // set by the @ref attribute
 
     private ElementReference docRef;
     string KeyPressed = "";
-    string EventInfo = "";
+    string guess = "";
 
     int[] keyboard_toprow = new int[] { 113, 119, 101, 114, 116, 121, 117, 105, 111, 112 };
     int[] keyboard_midrow = new int[] { 097, 115, 100, 102, 103, 104, 106, 107, 108 };
     int[] keyboard_botrow = new int[] { 122, 120, 099, 118, 098, 110, 109 };
+
+    WordieGame wordieGame = new WordieGame(1);
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -103,8 +104,21 @@
     private async Task KeyboardEventHandler(KeyboardEventArgs args)
     {
 
-        KeyPressed = "Key Pressed is " + args.Key;
-        EventInfo = "Event Type " + args.Type;
+        KeyPressed = args.Key;
+
+        if (args.Key.Length == 1)
+        {
+            char letter = char.Parse(args.Key);
+            bool isLetter = char.IsLetter(letter);
+
+            if (isLetter && guess.Length < 5)
+            {
+                guess += letter;
+            }
+
+            Console.WriteLine(guess);
+        }
+
 
         if (args.Key == "Enter") {await EnterPressed();}
 
@@ -116,15 +130,32 @@
     protected async Task KeyboardButtonPressed_Letter(char letter)
     {
         KeyPressed = "Key Pressed is " + letter;
+
+        if (guess.Length < 5)
+        {
+            guess += letter;
+            Console.WriteLine(guess);
+        }
+
     }
 
     protected async Task EnterPressed()
     {
         KeyPressed = "Key Pressed is enter from EnterPressed()";
+
+        if (guess.Length == 5)
+        {
+            Console.WriteLine("enter: inputting guess");
+        }
     }
 
     protected async Task BackspacePressed()
     {
         KeyPressed = "Key Pressed is backspace from BackspacePressed()";
+        if (guess.Length > 0)
+        {
+            guess = guess.Substring(0, guess.Length - 1);
+            Console.WriteLine(guess);
+        }
     }
-    }
+}

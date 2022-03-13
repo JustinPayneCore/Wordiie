@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wordiie", "Wordiie\Wordiie.csproj", "{B688DB49-0159-4A01-B7A4-72C6E5C28515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wordiie", "Wordiie\Wordiie.csproj", "{B688DB49-0159-4A01-B7A4-72C6E5C28515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Components", "Game.Components\Game.Components.csproj", "{1AF4B548-DF0F-47FD-BA94-0AF839480C5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B688DB49-0159-4A01-B7A4-72C6E5C28515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B688DB49-0159-4A01-B7A4-72C6E5C28515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B688DB49-0159-4A01-B7A4-72C6E5C28515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF4B548-DF0F-47FD-BA94-0AF839480C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF4B548-DF0F-47FD-BA94-0AF839480C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF4B548-DF0F-47FD-BA94-0AF839480C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF4B548-DF0F-47FD-BA94-0AF839480C5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
