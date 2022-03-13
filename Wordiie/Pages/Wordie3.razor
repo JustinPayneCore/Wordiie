@@ -1,11 +1,11 @@
-﻿@page "/wordiie"
+﻿@page "/wordiiie"
 
 <head>
     <link href="~/css/app.css" rel="stylesheet" />
 </head>
 
 <div style="height:100%" class="text-center docRef" tabindex="0" @ref="docRef" @onkeydown=" KeyboardEventHandler ">
-    <h1 class="display-4">WordIIe</h1>
+    <h1 class="display-4">WordIIIe</h1>
     <p id="guessResult">@guessResult</p>
 
     @*@foreach (var item in attemptedGuesses)
@@ -26,125 +26,214 @@
             <p id="Attempt6">_____</p>
         </div>*@
 
-<div>
-    <span class="background-letter @classw0g0c0" id="TextGuess0Char0" type="text"> @w0g0c0 </span>
-    <span class="background-letter @classw0g0c1" id="TextGuess0Char1" type="text"> @w0g0c1 </span>
-    <span class="background-letter @classw0g0c2" id="TextGuess0Char2" type="text"> @w0g0c2 </span>
-    <span class="background-letter @classw0g0c3" id="TextGuess0Char3" type="text"> @w0g0c3 </span>
-    <span class="background-letter @classw0g0c4" id="TextGuess0Char4" type="text"> @w0g0c4 </span>
+    <div>
+        <span class="background-letter @classw0g0c0" id="TextGuess0Char0" type="text"> @w0g0c0 </span>
+        <span class="background-letter @classw0g0c1" id="TextGuess0Char1" type="text"> @w0g0c1 </span>
+        <span class="background-letter @classw0g0c2" id="TextGuess0Char2" type="text"> @w0g0c2 </span>
+        <span class="background-letter @classw0g0c3" id="TextGuess0Char3" type="text"> @w0g0c3 </span>
+        <span class="background-letter @classw0g0c4" id="TextGuess0Char4" type="text"> @w0g0c4 </span>
 
-    @*empty block*@
-    <span class="background-letter"></span>
+        @*empty block*@
+        <span class="background-letter"></span>
 
-    <span class="background-letter @classw1g0c0" id="TextGuess0Char0" type="text"> @w1g0c0 </span>
-    <span class="background-letter @classw1g0c1" id="TextGuess0Char1" type="text"> @w1g0c1 </span>
-    <span class="background-letter @classw1g0c2" id="TextGuess0Char2" type="text"> @w1g0c2 </span>
-    <span class="background-letter @classw1g0c3" id="TextGuess0Char3" type="text"> @w1g0c3 </span>
-    <span class="background-letter @classw1g0c4" id="TextGuess0Char4" type="text"> @w1g0c4 </span>
-</div>
+        <span class="background-letter @classw1g0c0" id="TextGuess0Char0" type="text"> @w1g0c0 </span>
+        <span class="background-letter @classw1g0c1" id="TextGuess0Char1" type="text"> @w1g0c1 </span>
+        <span class="background-letter @classw1g0c2" id="TextGuess0Char2" type="text"> @w1g0c2 </span>
+        <span class="background-letter @classw1g0c3" id="TextGuess0Char3" type="text"> @w1g0c3 </span>
+        <span class="background-letter @classw1g0c4" id="TextGuess0Char4" type="text"> @w1g0c4 </span>
 
-<div>
-    <span class="background-letter @classw0g1c0" id="TextGuess1Char0" type="text"> @w0g1c0 </span>
-    <span class="background-letter @classw0g1c1" id="TextGuess1Char1" type="text"> @w0g1c1 </span>
-    <span class="background-letter @classw0g1c2" id="TextGuess1Char2" type="text"> @w0g1c2 </span>
-    <span class="background-letter @classw0g1c3" id="TextGuess1Char3" type="text"> @w0g1c3 </span>
-    <span class="background-letter @classw0g1c4" id="TextGuess1Char4" type="text"> @w0g1c4 </span>
+        @*empty block*@
+        <span class="background-letter"></span>
 
-    @*empty block*@
-    <span class="background-letter"></span>
+        <span class="background-letter @classw2g0c0" id="TextGuess0Char0" type="text"> @w2g0c0 </span>
+        <span class="background-letter @classw2g0c1" id="TextGuess0Char1" type="text"> @w2g0c1 </span>
+        <span class="background-letter @classw2g0c2" id="TextGuess0Char2" type="text"> @w2g0c2 </span>
+        <span class="background-letter @classw2g0c3" id="TextGuess0Char3" type="text"> @w2g0c3 </span>
+        <span class="background-letter @classw2g0c4" id="TextGuess0Char4" type="text"> @w2g0c4 </span>
+    </div>
 
-    <span class="background-letter @classw1g1c0" id="TextGuess1Char0" type="text"> @w1g1c0 </span>
-    <span class="background-letter @classw1g1c1" id="TextGuess1Char1" type="text"> @w1g1c1 </span>
-    <span class="background-letter @classw1g1c2" id="TextGuess1Char2" type="text"> @w1g1c2 </span>
-    <span class="background-letter @classw1g1c3" id="TextGuess1Char3" type="text"> @w1g1c3 </span>
-    <span class="background-letter @classw1g1c4" id="TextGuess1Char4" type="text"> @w1g1c4 </span>
-</div>
+    <div>
+        <span class="background-letter @classw0g1c0" id="TextGuess1Char0" type="text"> @w0g1c0 </span>
+        <span class="background-letter @classw0g1c1" id="TextGuess1Char1" type="text"> @w0g1c1 </span>
+        <span class="background-letter @classw0g1c2" id="TextGuess1Char2" type="text"> @w0g1c2 </span>
+        <span class="background-letter @classw0g1c3" id="TextGuess1Char3" type="text"> @w0g1c3 </span>
+        <span class="background-letter @classw0g1c4" id="TextGuess1Char4" type="text"> @w0g1c4 </span>
 
-<div>
-    <span class="background-letter @classw0g2c0" id="TextGuess2Char0" type="text"> @w0g2c0 </span>
-    <span class="background-letter @classw0g2c1" id="TextGuess2Char1" type="text"> @w0g2c1 </span>
-    <span class="background-letter @classw0g2c2" id="TextGuess2Char2" type="text"> @w0g2c2 </span>
-    <span class="background-letter @classw0g2c3" id="TextGuess2Char3" type="text"> @w0g2c3 </span>
-    <span class="background-letter @classw0g2c4" id="TextGuess2Char4" type="text"> @w0g2c4 </span>
+        @*empty block*@
+        <span class="background-letter"></span>
 
-    @*empty block*@
-    <span class="background-letter"></span>
+        <span class="background-letter @classw1g1c0" id="TextGuess1Char0" type="text"> @w1g1c0 </span>
+        <span class="background-letter @classw1g1c1" id="TextGuess1Char1" type="text"> @w1g1c1 </span>
+        <span class="background-letter @classw1g1c2" id="TextGuess1Char2" type="text"> @w1g1c2 </span>
+        <span class="background-letter @classw1g1c3" id="TextGuess1Char3" type="text"> @w1g1c3 </span>
+        <span class="background-letter @classw1g1c4" id="TextGuess1Char4" type="text"> @w1g1c4 </span>
 
-    <span class="background-letter @classw1g2c0" id="TextGuess2Char0" type="text"> @w1g2c0 </span>
-    <span class="background-letter @classw1g2c1" id="TextGuess2Char1" type="text"> @w1g2c1 </span>
-    <span class="background-letter @classw1g2c2" id="TextGuess2Char2" type="text"> @w1g2c2 </span>
-    <span class="background-letter @classw1g2c3" id="TextGuess2Char3" type="text"> @w1g2c3 </span>
-    <span class="background-letter @classw1g2c4" id="TextGuess2Char4" type="text"> @w1g2c4 </span>
+        @*empty block*@
+        <span class="background-letter"></span>
 
-</div>
+        <span class="background-letter @classw2g1c0" id="TextGuess1Char0" type="text"> @w2g1c0 </span>
+        <span class="background-letter @classw2g1c1" id="TextGuess1Char1" type="text"> @w2g1c1 </span>
+        <span class="background-letter @classw2g1c2" id="TextGuess1Char2" type="text"> @w2g1c2 </span>
+        <span class="background-letter @classw2g1c3" id="TextGuess1Char3" type="text"> @w2g1c3 </span>
+        <span class="background-letter @classw2g1c4" id="TextGuess1Char4" type="text"> @w2g1c4 </span>
+    </div>
 
-<div>
-    <span class="background-letter @classw0g3c0" id="TextGuess3Char0" type="text"> @w0g3c0 </span>
-    <span class="background-letter @classw0g3c1" id="TextGuess3Char1" type="text"> @w0g3c1 </span>
-    <span class="background-letter @classw0g3c2" id="TextGuess3Char2" type="text"> @w0g3c2 </span>
-    <span class="background-letter @classw0g3c3" id="TextGuess3Char3" type="text"> @w0g3c3 </span>
-    <span class="background-letter @classw0g3c4" id="TextGuess3Char4" type="text"> @w0g3c4 </span>
+    <div>
+        <span class="background-letter @classw0g2c0" id="TextGuess2Char0" type="text"> @w0g2c0 </span>
+        <span class="background-letter @classw0g2c1" id="TextGuess2Char1" type="text"> @w0g2c1 </span>
+        <span class="background-letter @classw0g2c2" id="TextGuess2Char2" type="text"> @w0g2c2 </span>
+        <span class="background-letter @classw0g2c3" id="TextGuess2Char3" type="text"> @w0g2c3 </span>
+        <span class="background-letter @classw0g2c4" id="TextGuess2Char4" type="text"> @w0g2c4 </span>
 
-    @*empty block*@
-    <span class="background-letter"></span>
+        @*empty block*@
+        <span class="background-letter"></span>
 
-    <span class="background-letter @classw1g3c0" id="TextGuess3Char0" type="text"> @w1g3c0 </span>
-    <span class="background-letter @classw1g3c1" id="TextGuess3Char1" type="text"> @w1g3c1 </span>
-    <span class="background-letter @classw1g3c2" id="TextGuess3Char2" type="text"> @w1g3c2 </span>
-    <span class="background-letter @classw1g3c3" id="TextGuess3Char3" type="text"> @w1g3c3 </span>
-    <span class="background-letter @classw1g3c4" id="TextGuess3Char4" type="text"> @w1g3c4 </span>
-</div>
+        <span class="background-letter @classw1g2c0" id="TextGuess2Char0" type="text"> @w1g2c0 </span>
+        <span class="background-letter @classw1g2c1" id="TextGuess2Char1" type="text"> @w1g2c1 </span>
+        <span class="background-letter @classw1g2c2" id="TextGuess2Char2" type="text"> @w1g2c2 </span>
+        <span class="background-letter @classw1g2c3" id="TextGuess2Char3" type="text"> @w1g2c3 </span>
+        <span class="background-letter @classw1g2c4" id="TextGuess2Char4" type="text"> @w1g2c4 </span>
 
-<div>
-    <span class="background-letter @classw0g4c0" id="TextGuess4Char0" type="text"> @w0g4c0 </span>
-    <span class="background-letter @classw0g4c1" id="TextGuess4Char1" type="text"> @w0g4c1 </span>
-    <span class="background-letter @classw0g4c2" id="TextGuess4Char2" type="text"> @w0g4c2 </span>
-    <span class="background-letter @classw0g4c3" id="TextGuess4Char3" type="text"> @w0g4c3 </span>
-    <span class="background-letter @classw0g4c4" id="TextGuess4Char4" type="text"> @w0g4c4 </span>
+        @*empty block*@
+        <span class="background-letter"></span>
 
-    @*empty block*@
-    <span class="background-letter"></span>
+        <span class="background-letter @classw2g2c0" id="TextGuess2Char0" type="text"> @w2g2c0 </span>
+        <span class="background-letter @classw2g2c1" id="TextGuess2Char1" type="text"> @w2g2c1 </span>
+        <span class="background-letter @classw2g2c2" id="TextGuess2Char2" type="text"> @w2g2c2 </span>
+        <span class="background-letter @classw2g2c3" id="TextGuess2Char3" type="text"> @w2g2c3 </span>
+        <span class="background-letter @classw2g2c4" id="TextGuess2Char4" type="text"> @w2g2c4 </span>
 
-    <span class="background-letter @classw1g4c0" id="TextGuess4Char0" type="text"> @w1g4c0 </span>
-    <span class="background-letter @classw1g4c1" id="TextGuess4Char1" type="text"> @w1g4c1 </span>
-    <span class="background-letter @classw1g4c2" id="TextGuess4Char2" type="text"> @w1g4c2 </span>
-    <span class="background-letter @classw1g4c3" id="TextGuess4Char3" type="text"> @w1g4c3 </span>
-    <span class="background-letter @classw1g4c4" id="TextGuess4Char4" type="text"> @w1g4c4 </span>
-</div>
+    </div>
 
-<div>
-    <span class="background-letter @classw0g5c0" id="TextGuess5Char0" type="text"> @w0g5c0 </span>
-    <span class="background-letter @classw0g5c1" id="TextGuess5Char1" type="text"> @w0g5c1 </span>
-    <span class="background-letter @classw0g5c2" id="TextGuess5Char2" type="text"> @w0g5c2 </span>
-    <span class="background-letter @classw0g5c3" id="TextGuess5Char3" type="text"> @w0g5c3 </span>
-    <span class="background-letter @classw0g5c4" id="TextGuess5Char4" type="text"> @w0g5c4 </span>
+    <div>
+        <span class="background-letter @classw0g3c0" id="TextGuess3Char0" type="text"> @w0g3c0 </span>
+        <span class="background-letter @classw0g3c1" id="TextGuess3Char1" type="text"> @w0g3c1 </span>
+        <span class="background-letter @classw0g3c2" id="TextGuess3Char2" type="text"> @w0g3c2 </span>
+        <span class="background-letter @classw0g3c3" id="TextGuess3Char3" type="text"> @w0g3c3 </span>
+        <span class="background-letter @classw0g3c4" id="TextGuess3Char4" type="text"> @w0g3c4 </span>
 
-    @*empty block*@
-    <span class="background-letter"></span>
+        @*empty block*@
+        <span class="background-letter"></span>
 
-    <span class="background-letter @classw1g5c0" id="TextGuess5Char0" type="text"> @w1g5c0 </span>
-    <span class="background-letter @classw1g5c1" id="TextGuess5Char1" type="text"> @w1g5c1 </span>
-    <span class="background-letter @classw1g5c2" id="TextGuess5Char2" type="text"> @w1g5c2 </span>
-    <span class="background-letter @classw1g5c3" id="TextGuess5Char3" type="text"> @w1g5c3 </span>
-    <span class="background-letter @classw1g5c4" id="TextGuess5Char4" type="text"> @w1g5c4 </span>
-</div>
+        <span class="background-letter @classw1g3c0" id="TextGuess3Char0" type="text"> @w1g3c0 </span>
+        <span class="background-letter @classw1g3c1" id="TextGuess3Char1" type="text"> @w1g3c1 </span>
+        <span class="background-letter @classw1g3c2" id="TextGuess3Char2" type="text"> @w1g3c2 </span>
+        <span class="background-letter @classw1g3c3" id="TextGuess3Char3" type="text"> @w1g3c3 </span>
+        <span class="background-letter @classw1g3c4" id="TextGuess3Char4" type="text"> @w1g3c4 </span>
 
-<div>
-    <span class="background-letter @classw0g6c0" id="TextGuess5Char0" type="text"> @w0g6c0 </span>
-    <span class="background-letter @classw0g6c1" id="TextGuess5Char1" type="text"> @w0g6c1 </span>
-    <span class="background-letter @classw0g6c2" id="TextGuess5Char2" type="text"> @w0g6c2 </span>
-    <span class="background-letter @classw0g6c3" id="TextGuess5Char3" type="text"> @w0g6c3 </span>
-    <span class="background-letter @classw0g6c4" id="TextGuess5Char4" type="text"> @w0g6c4 </span>
+        @*empty block*@
+        <span class="background-letter"></span>
 
-    @*empty block*@
-    <span class="background-letter"></span>
+        <span class="background-letter @classw2g3c0" id="TextGuess3Char0" type="text"> @w2g3c0 </span>
+        <span class="background-letter @classw2g3c1" id="TextGuess3Char1" type="text"> @w2g3c1 </span>
+        <span class="background-letter @classw2g3c2" id="TextGuess3Char2" type="text"> @w2g3c2 </span>
+        <span class="background-letter @classw2g3c3" id="TextGuess3Char3" type="text"> @w2g3c3 </span>
+        <span class="background-letter @classw2g3c4" id="TextGuess3Char4" type="text"> @w2g3c4 </span>
+    </div>
 
-    <span class="background-letter @classw1g6c0" id="TextGuess5Char0" type="text"> @w1g6c0 </span>
-    <span class="background-letter @classw1g6c1" id="TextGuess5Char1" type="text"> @w1g6c1 </span>
-    <span class="background-letter @classw1g6c2" id="TextGuess5Char2" type="text"> @w1g6c2 </span>
-    <span class="background-letter @classw1g6c3" id="TextGuess5Char3" type="text"> @w1g6c3 </span>
-    <span class="background-letter @classw1g6c4" id="TextGuess5Char4" type="text"> @w1g6c4 </span>
-</div>
+    <div>
+        <span class="background-letter @classw0g4c0" id="TextGuess4Char0" type="text"> @w0g4c0 </span>
+        <span class="background-letter @classw0g4c1" id="TextGuess4Char1" type="text"> @w0g4c1 </span>
+        <span class="background-letter @classw0g4c2" id="TextGuess4Char2" type="text"> @w0g4c2 </span>
+        <span class="background-letter @classw0g4c3" id="TextGuess4Char3" type="text"> @w0g4c3 </span>
+        <span class="background-letter @classw0g4c4" id="TextGuess4Char4" type="text"> @w0g4c4 </span>
+
+        @*empty block*@
+        <span class="background-letter"></span>
+
+        <span class="background-letter @classw1g4c0" id="TextGuess4Char0" type="text"> @w1g4c0 </span>
+        <span class="background-letter @classw1g4c1" id="TextGuess4Char1" type="text"> @w1g4c1 </span>
+        <span class="background-letter @classw1g4c2" id="TextGuess4Char2" type="text"> @w1g4c2 </span>
+        <span class="background-letter @classw1g4c3" id="TextGuess4Char3" type="text"> @w1g4c3 </span>
+        <span class="background-letter @classw1g4c4" id="TextGuess4Char4" type="text"> @w1g4c4 </span>
+
+        @*empty block*@
+        <span class="background-letter"></span>
+
+        <span class="background-letter @classw2g4c0" id="TextGuess4Char0" type="text"> @w2g4c0 </span>
+        <span class="background-letter @classw2g4c1" id="TextGuess4Char1" type="text"> @w2g4c1 </span>
+        <span class="background-letter @classw2g4c2" id="TextGuess4Char2" type="text"> @w2g4c2 </span>
+        <span class="background-letter @classw2g4c3" id="TextGuess4Char3" type="text"> @w2g4c3 </span>
+        <span class="background-letter @classw2g4c4" id="TextGuess4Char4" type="text"> @w2g4c4 </span>
+    </div>
+
+    <div>
+        <span class="background-letter @classw0g5c0" id="TextGuess5Char0" type="text"> @w0g5c0 </span>
+        <span class="background-letter @classw0g5c1" id="TextGuess5Char1" type="text"> @w0g5c1 </span>
+        <span class="background-letter @classw0g5c2" id="TextGuess5Char2" type="text"> @w0g5c2 </span>
+        <span class="background-letter @classw0g5c3" id="TextGuess5Char3" type="text"> @w0g5c3 </span>
+        <span class="background-letter @classw0g5c4" id="TextGuess5Char4" type="text"> @w0g5c4 </span>
+
+        @*empty block*@
+        <span class="background-letter"></span>
+
+        <span class="background-letter @classw1g5c0" id="TextGuess5Char0" type="text"> @w1g5c0 </span>
+        <span class="background-letter @classw1g5c1" id="TextGuess5Char1" type="text"> @w1g5c1 </span>
+        <span class="background-letter @classw1g5c2" id="TextGuess5Char2" type="text"> @w1g5c2 </span>
+        <span class="background-letter @classw1g5c3" id="TextGuess5Char3" type="text"> @w1g5c3 </span>
+        <span class="background-letter @classw1g5c4" id="TextGuess5Char4" type="text"> @w1g5c4 </span>
+
+        @*empty block*@
+        <span class="background-letter"></span>
+
+        <span class="background-letter @classw2g5c0" id="TextGuess5Char0" type="text"> @w2g5c0 </span>
+        <span class="background-letter @classw2g5c1" id="TextGuess5Char1" type="text"> @w2g5c1 </span>
+        <span class="background-letter @classw2g5c2" id="TextGuess5Char2" type="text"> @w2g5c2 </span>
+        <span class="background-letter @classw2g5c3" id="TextGuess5Char3" type="text"> @w2g5c3 </span>
+        <span class="background-letter @classw2g5c4" id="TextGuess5Char4" type="text"> @w2g5c4 </span>
+    </div>
+
+    <div>
+        <span class="background-letter @classw0g6c0" id="TextGuess5Char0" type="text"> @w0g6c0 </span>
+        <span class="background-letter @classw0g6c1" id="TextGuess5Char1" type="text"> @w0g6c1 </span>
+        <span class="background-letter @classw0g6c2" id="TextGuess5Char2" type="text"> @w0g6c2 </span>
+        <span class="background-letter @classw0g6c3" id="TextGuess5Char3" type="text"> @w0g6c3 </span>
+        <span class="background-letter @classw0g6c4" id="TextGuess5Char4" type="text"> @w0g6c4 </span>
+
+        @*empty block*@
+        <span class="background-letter"></span>
+
+        <span class="background-letter @classw1g6c0" id="TextGuess5Char0" type="text"> @w1g6c0 </span>
+        <span class="background-letter @classw1g6c1" id="TextGuess5Char1" type="text"> @w1g6c1 </span>
+        <span class="background-letter @classw1g6c2" id="TextGuess5Char2" type="text"> @w1g6c2 </span>
+        <span class="background-letter @classw1g6c3" id="TextGuess5Char3" type="text"> @w1g6c3 </span>
+        <span class="background-letter @classw1g6c4" id="TextGuess5Char4" type="text"> @w1g6c4 </span>
+
+        @*empty block*@
+        <span class="background-letter"></span>
+
+        <span class="background-letter @classw2g6c0" id="TextGuess5Char0" type="text"> @w2g6c0 </span>
+        <span class="background-letter @classw2g6c1" id="TextGuess5Char1" type="text"> @w2g6c1 </span>
+        <span class="background-letter @classw2g6c2" id="TextGuess5Char2" type="text"> @w2g6c2 </span>
+        <span class="background-letter @classw2g6c3" id="TextGuess5Char3" type="text"> @w2g6c3 </span>
+        <span class="background-letter @classw2g6c4" id="TextGuess5Char4" type="text"> @w2g6c4 </span>
+    </div>
+
+    <div>
+        <span class="background-letter @classw0g7c0" id="TextGuess5Char0" type="text"> @w0g7c0 </span>
+        <span class="background-letter @classw0g7c1" id="TextGuess5Char1" type="text"> @w0g7c1 </span>
+        <span class="background-letter @classw0g7c2" id="TextGuess5Char2" type="text"> @w0g7c2 </span>
+        <span class="background-letter @classw0g7c3" id="TextGuess5Char3" type="text"> @w0g7c3 </span>
+        <span class="background-letter @classw0g7c4" id="TextGuess5Char4" type="text"> @w0g7c4 </span>
+
+        @*empty block*@
+        <span class="background-letter"></span>
+
+        <span class="background-letter @classw1g7c0" id="TextGuess5Char0" type="text"> @w1g7c0 </span>
+        <span class="background-letter @classw1g7c1" id="TextGuess5Char1" type="text"> @w1g7c1 </span>
+        <span class="background-letter @classw1g7c2" id="TextGuess5Char2" type="text"> @w1g7c2 </span>
+        <span class="background-letter @classw1g7c3" id="TextGuess5Char3" type="text"> @w1g7c3 </span>
+        <span class="background-letter @classw1g7c4" id="TextGuess5Char4" type="text"> @w1g7c4 </span>
+
+        @*empty block*@
+        <span class="background-letter"></span>
+
+        <span class="background-letter @classw2g7c0" id="TextGuess5Char0" type="text"> @w2g7c0 </span>
+        <span class="background-letter @classw2g7c1" id="TextGuess5Char1" type="text"> @w2g7c1 </span>
+        <span class="background-letter @classw2g7c2" id="TextGuess5Char2" type="text"> @w2g7c2 </span>
+        <span class="background-letter @classw2g7c3" id="TextGuess5Char3" type="text"> @w2g7c3 </span>
+        <span class="background-letter @classw2g7c4" id="TextGuess5Char4" type="text"> @w2g7c4 </span>
+    </div>
 
     <div>
 
@@ -187,16 +276,26 @@
         w0g3c0, w0g3c1, w0g3c2, w0g3c3, w0g3c4,
         w0g4c0, w0g4c1, w0g4c2, w0g4c3, w0g4c4,
         w0g5c0, w0g5c1, w0g5c2, w0g5c3, w0g5c4,
-        w0g6c0, w0g6c1, w0g6c2, w0g6c3, w0g6c4;
-
+        w0g6c0, w0g6c1, w0g6c2, w0g6c3, w0g6c4,
+    w0g7c0, w0g7c1, w0g7c2, w0g7c3, w0g7c4;
 
     string w1g0c0, w1g0c1, w1g0c2, w1g0c3, w1g0c4,
-    w1g1c0, w1g1c1, w1g1c2, w1g1c3, w1g1c4,
-    w1g2c0, w1g2c1, w1g2c2, w1g2c3, w1g2c4,
-    w1g3c0, w1g3c1, w1g3c2, w1g3c3, w1g3c4,
-    w1g4c0, w1g4c1, w1g4c2, w1g4c3, w1g4c4,
-    w1g5c0, w1g5c1, w1g5c2, w1g5c3, w1g5c4,
-    w1g6c0, w1g6c1, w1g6c2, w1g6c3, w1g6c4;
+   w1g1c0, w1g1c1, w1g1c2, w1g1c3, w1g1c4,
+   w1g2c0, w1g2c1, w1g2c2, w1g2c3, w1g2c4,
+   w1g3c0, w1g3c1, w1g3c2, w1g3c3, w1g3c4,
+   w1g4c0, w1g4c1, w1g4c2, w1g4c3, w1g4c4,
+   w1g5c0, w1g5c1, w1g5c2, w1g5c3, w1g5c4,
+   w1g6c0, w1g6c1, w1g6c2, w1g6c3, w1g6c4,
+   w1g7c0, w1g7c1, w1g7c2, w1g7c3, w1g7c4;
+
+    string w2g0c0, w2g0c1, w2g0c2, w2g0c3, w2g0c4,
+w2g1c0, w2g1c1, w2g1c2, w2g1c3, w2g1c4,
+w2g2c0, w2g2c1, w2g2c2, w2g2c3, w2g2c4,
+w2g3c0, w2g3c1, w2g3c2, w2g3c3, w2g3c4,
+w2g4c0, w2g4c1, w2g4c2, w2g4c3, w2g4c4,
+w2g5c0, w2g5c1, w2g5c2, w2g5c3, w2g5c4,
+w2g6c0, w2g6c1, w2g6c2, w2g6c3, w2g6c4,
+w2g7c0, w2g7c1, w2g7c2, w2g7c3, w2g7c4;
 
     string classw0g0c0 = "background-lightgrey";
     string classw0g0c1 = "background-lightgrey";
@@ -233,6 +332,11 @@
     string classw0g6c2 = "background-lightgrey";
     string classw0g6c3 = "background-lightgrey";
     string classw0g6c4 = "background-lightgrey";
+    string classw0g7c0 = "background-lightgrey";
+    string classw0g7c1 = "background-lightgrey";
+    string classw0g7c2 = "background-lightgrey";
+    string classw0g7c3 = "background-lightgrey";
+    string classw0g7c4 = "background-lightgrey";
 
     string classw1g0c0 = "background-lightgrey";
     string classw1g0c1 = "background-lightgrey";
@@ -269,6 +373,52 @@
     string classw1g6c2 = "background-lightgrey";
     string classw1g6c3 = "background-lightgrey";
     string classw1g6c4 = "background-lightgrey";
+    string classw1g7c0 = "background-lightgrey";
+    string classw1g7c1 = "background-lightgrey";
+    string classw1g7c2 = "background-lightgrey";
+    string classw1g7c3 = "background-lightgrey";
+    string classw1g7c4 = "background-lightgrey";
+
+    string classw2g0c0 = "background-lightgrey";
+    string classw2g0c1 = "background-lightgrey";
+    string classw2g0c2 = "background-lightgrey";
+    string classw2g0c3 = "background-lightgrey";
+    string classw2g0c4 = "background-lightgrey";
+    string classw2g1c0 = "background-lightgrey";
+    string classw2g1c1 = "background-lightgrey";
+    string classw2g1c2 = "background-lightgrey";
+    string classw2g1c3 = "background-lightgrey";
+    string classw2g1c4 = "background-lightgrey";
+    string classw2g2c0 = "background-lightgrey";
+    string classw2g2c1 = "background-lightgrey";
+    string classw2g2c2 = "background-lightgrey";
+    string classw2g2c3 = "background-lightgrey";
+    string classw2g2c4 = "background-lightgrey";
+    string classw2g3c0 = "background-lightgrey";
+    string classw2g3c1 = "background-lightgrey";
+    string classw2g3c2 = "background-lightgrey";
+    string classw2g3c3 = "background-lightgrey";
+    string classw2g3c4 = "background-lightgrey";
+    string classw2g4c0 = "background-lightgrey";
+    string classw2g4c1 = "background-lightgrey";
+    string classw2g4c2 = "background-lightgrey";
+    string classw2g4c3 = "background-lightgrey";
+    string classw2g4c4 = "background-lightgrey";
+    string classw2g5c0 = "background-lightgrey";
+    string classw2g5c1 = "background-lightgrey";
+    string classw2g5c2 = "background-lightgrey";
+    string classw2g5c3 = "background-lightgrey";
+    string classw2g5c4 = "background-lightgrey";
+    string classw2g6c0 = "background-lightgrey";
+    string classw2g6c1 = "background-lightgrey";
+    string classw2g6c2 = "background-lightgrey";
+    string classw2g6c3 = "background-lightgrey";
+    string classw2g6c4 = "background-lightgrey";
+    string classw2g7c0 = "background-lightgrey";
+    string classw2g7c1 = "background-lightgrey";
+    string classw2g7c2 = "background-lightgrey";
+    string classw2g7c3 = "background-lightgrey";
+    string classw2g7c4 = "background-lightgrey";
 
     int guessRow = 0;
     int guessCol = 0;
@@ -279,7 +429,7 @@
     string[] keyboard_midrow = new string[] { "A", "S", "D", "F", "G", "H", "J", "K", "L" };
     string[] keyboard_botrow = new string[] { "Z", "X", "C", "V", "B", "N", "M" };
 
-    WordieGame wordieGame = new WordieGame(2);
+    WordieGame wordieGame = new WordieGame(3);
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -578,7 +728,7 @@ private void ChangeBackground(int resultIndex, int wordToGuess) {
                     }
                     break;
 
-                default:
+                case 6:
                     switch (resultIndex)
                     {
                         case 0:
@@ -595,6 +745,26 @@ private void ChangeBackground(int resultIndex, int wordToGuess) {
                             break;
                         default:
                             classw0g6c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+                default:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw0g7c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw0g7c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw0g7c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw0g7c3 = newClassBackground;
+                            break;
+                        default:
+                            classw0g7c4 = newClassBackground;
                             break;
                     }
                     break;
@@ -730,7 +900,7 @@ private void ChangeBackground(int resultIndex, int wordToGuess) {
                     }
                     break;
 
-                default:
+                case 6:
                     switch (resultIndex)
                     {
                         case 0:
@@ -747,6 +917,198 @@ private void ChangeBackground(int resultIndex, int wordToGuess) {
                             break;
                         default:
                             classw1g6c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+                default:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw1g7c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw1g7c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw1g7c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw1g7c3 = newClassBackground;
+                            break;
+                        default:
+                            classw1g7c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+            }
+            break;
+
+        case 2:
+            switch (guessRow)
+            {
+                case 0:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw2g0c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw2g0c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw2g0c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw2g0c3 = newClassBackground;
+                            break;
+                        default:
+                            classw2g0c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+
+                case 1:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw2g1c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw2g1c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw2g1c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw2g1c3 = newClassBackground;
+                            break;
+                        default:
+                            classw2g1c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+
+                case 2:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw2g2c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw2g2c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw2g2c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw2g2c3 = newClassBackground;
+                            break;
+                        default:
+                            classw2g2c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+
+                case 3:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw2g3c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw2g3c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw2g3c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw2g3c3 = newClassBackground;
+                            break;
+                        default:
+                            classw2g3c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+
+                case 4:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw2g4c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw2g4c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw2g4c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw2g4c3 = newClassBackground;
+                            break;
+                        default:
+                            classw2g4c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+
+                case 5:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw2g5c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw2g5c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw2g5c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw2g5c3 = newClassBackground;
+                            break;
+                        default:
+                            classw2g5c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+
+                case 6:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw2g6c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw2g6c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw2g6c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw2g6c3 = newClassBackground;
+                            break;
+                        default:
+                            classw2g6c4 = newClassBackground;
+                            break;
+                    }
+                    break;
+                default:
+                    switch (resultIndex)
+                    {
+                        case 0:
+                            classw2g7c0 = newClassBackground;
+                            break;
+                        case 1:
+                            classw2g7c1 = newClassBackground;
+                            break;
+                        case 2:
+                            classw2g7c2 = newClassBackground;
+                            break;
+                        case 3:
+                            classw2g7c3 = newClassBackground;
+                            break;
+                        default:
+                            classw2g7c4 = newClassBackground;
                             break;
                     }
                     break;
@@ -770,22 +1132,27 @@ private void ChangeLetter(string letter)
                 case 0:
                     w0g0c0 = letter;
                     w1g0c0 = letter;
+                    w2g0c0 = letter;
                     break;
                 case 1:
                     w0g0c1 = letter;
                     w1g0c1 = letter;
+                    w2g0c1 = letter;
                     break;
                 case 2:
                     w0g0c2 = letter;
                     w1g0c2 = letter;
+                    w2g0c2 = letter;
                     break;
                 case 3:
                     w0g0c3 = letter;
                     w1g0c3 = letter;
+                    w2g0c3 = letter;
                     break;
                 default:
                     w0g0c4 = letter;
                     w1g0c4 = letter;
+                    w2g0c4 = letter;
                     break;
             }
             break;
@@ -796,22 +1163,27 @@ private void ChangeLetter(string letter)
                 case 0:
                     w0g1c0 = letter;
                     w1g1c0 = letter;
+                    w2g1c0 = letter;
                     break;
                 case 1:
                     w0g1c1 = letter;
                     w1g1c1 = letter;
+                    w2g1c1 = letter;
                     break;
                 case 2:
                     w0g1c2 = letter;
                     w1g1c2 = letter;
+                    w2g1c2 = letter;
                     break;
                 case 3:
                     w0g1c3 = letter;
                     w1g1c3 = letter;
+                    w2g1c3 = letter;
                     break;
                 default:
                     w0g1c4 = letter;
                     w1g1c4 = letter;
+                    w2g1c4 = letter;
                     break;
             }
             break;
@@ -822,22 +1194,27 @@ private void ChangeLetter(string letter)
                 case 0:
                     w0g2c0 = letter;
                     w1g2c0 = letter;
+                    w2g2c0 = letter;
                     break;
                 case 1:
                     w0g2c1 = letter;
                     w1g2c1 = letter;
+                    w2g2c1 = letter;
                     break;
                 case 2:
                     w0g2c2 = letter;
                     w1g2c2 = letter;
+                    w2g2c2 = letter;
                     break;
                 case 3:
                     w0g2c3 = letter;
                     w1g2c3 = letter;
+                    w2g2c3 = letter;
                     break;
                 default:
                     w0g2c4 = letter;
                     w1g2c4 = letter;
+                    w2g2c4 = letter;
                     break;
             }
             break;
@@ -848,22 +1225,27 @@ private void ChangeLetter(string letter)
                 case 0:
                     w0g3c0 = letter;
                     w1g3c0 = letter;
+                    w2g3c0 = letter;
                     break;
                 case 1:
                     w0g3c1 = letter;
                     w1g3c1 = letter;
+                    w2g3c1 = letter;
                     break;
                 case 2:
                     w0g3c2 = letter;
                     w1g3c2 = letter;
+                    w2g3c2 = letter;
                     break;
                 case 3:
                     w0g3c3 = letter;
                     w1g3c3 = letter;
+                    w2g3c3 = letter;
                     break;
                 default:
                     w0g3c4 = letter;
                     w1g3c4 = letter;
+                    w2g3c4 = letter;
                     break;
             }
             break;
@@ -874,22 +1256,27 @@ private void ChangeLetter(string letter)
                 case 0:
                     w0g4c0 = letter;
                     w1g4c0 = letter;
+                    w2g4c0 = letter;
                     break;
                 case 1:
                     w0g4c1 = letter;
                     w1g4c1 = letter;
+                    w2g4c1 = letter;
                     break;
                 case 2:
                     w0g4c2 = letter;
                     w1g4c2 = letter;
+                    w2g4c2 = letter;
                     break;
                 case 3:
                     w0g4c3 = letter;
                     w1g4c3 = letter;
+                    w2g4c3 = letter;
                     break;
                 default:
                     w0g4c4 = letter;
                     w1g4c4 = letter;
+                    w2g4c4 = letter;
                     break;
             }
             break;
@@ -900,22 +1287,58 @@ private void ChangeLetter(string letter)
                 case 0:
                     w0g5c0 = letter;
                     w1g5c0 = letter;
+                    w2g5c0 = letter;
                     break;
                 case 1:
                     w0g5c1 = letter;
                     w1g5c1 = letter;
+                    w2g5c1 = letter;
                     break;
                 case 2:
                     w0g5c2 = letter;
                     w1g5c2 = letter;
+                    w2g5c2 = letter;
                     break;
                 case 3:
                     w0g5c3 = letter;
                     w1g5c3 = letter;
+                    w2g5c3 = letter;
                     break;
                 default:
                     w0g5c4 = letter;
                     w1g5c4 = letter;
+                    w2g5c4 = letter;
+                    break;
+            }
+            break;
+
+        case 6:
+            switch (guessCol)
+            {
+                case 0:
+                    w0g6c0 = letter;
+                    w1g6c0 = letter;
+                    w2g6c0 = letter;
+                    break;
+                case 1:
+                    w0g6c1 = letter;
+                    w1g6c1 = letter;
+                    w2g6c1 = letter;
+                    break;
+                case 2:
+                    w0g6c2 = letter;
+                    w1g6c2 = letter;
+                    w2g6c2 = letter;
+                    break;
+                case 3:
+                    w0g6c3 = letter;
+                    w1g6c3 = letter;
+                    w2g6c3 = letter;
+                    break;
+                default:
+                    w0g6c4 = letter;
+                    w1g6c4 = letter;
+                    w2g6c4 = letter;
                     break;
             }
             break;
@@ -924,24 +1347,29 @@ private void ChangeLetter(string letter)
             switch (guessCol)
             {
                 case 0:
-                    w0g6c0 = letter;
-                    w1g6c0 = letter;
+                    w0g7c0 = letter;
+                    w1g7c0 = letter;
+                    w2g7c0 = letter;
                     break;
                 case 1:
-                    w0g6c1 = letter;
-                    w1g6c1 = letter;
+                    w0g7c1 = letter;
+                    w1g7c1 = letter;
+                    w2g7c1 = letter;
                     break;
                 case 2:
-                    w0g6c2 = letter;
-                    w1g6c2 = letter;
+                    w0g7c2 = letter;
+                    w1g7c2 = letter;
+                    w2g7c2 = letter;
                     break;
                 case 3:
-                    w0g6c3 = letter;
-                    w1g6c3 = letter;
+                    w0g7c3 = letter;
+                    w1g7c3 = letter;
+                    w2g7c3 = letter;
                     break;
                 default:
-                    w0g6c4 = letter;
-                    w1g6c4 = letter;
+                    w0g7c4 = letter;
+                    w1g7c4 = letter;
+                    w2g7c4 = letter;
                     break;
             }
             break;
