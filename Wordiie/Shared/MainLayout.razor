@@ -1,17 +1,40 @@
 ﻿@inherits LayoutComponentBase
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <div class="page">
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        <div class="main">
+
+            <header>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                    <div class="container" style="font-family:Playfair Display" >
+                        <a class="navbar-brand" style="font-size:xx-large">Wordie</a>
+                        <div>
+                            <ul class="navbar-nav flex-grow-1" style="font-size:large; color:black">
+                                <NavLink class="nav-link" href="">
+                                    <span class="text-dark" aria-hidden="true">WordIe</span>
+                                </NavLink>
+                                <NavLink class="nav-link" href="wordiie">
+                                    <span class="text-dark" aria-hidden="true">WordIIe</span>
+                                </NavLink>
+                                <NavLink class="nav-link" href="wordiie">
+                                    <span class="text-dark" aria-hidden="true"> WordIIIe</span>
+                                </NavLink>
+                                <NavLink class="nav-link" href="wordive">
+                                    <span class="text-dark" aria-hidden="true"> WordIVe</span>
+                                </NavLink>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="content px-4">
+                @Body
+            </div>
+
+
         </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
     </div>
-</div>
