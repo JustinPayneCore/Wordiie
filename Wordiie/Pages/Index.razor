@@ -1,17 +1,29 @@
 ﻿@page "/"
 
-    <div class="text-center" tabindex="0" @ref="docRef" @onkeydown=" KeyboardEventHandler ">
-        <h1 class="display-4">WordIe</h1>
-        <p>@KeyPressed</p>
-        <div>
-            <span id="TextGuess1Char0" type="text"> @KeyPressed </span>
-            <span id="TextGuess1Char1" type="text"> @KeyPressed </span>
-            <span id="TextGuess1Char2" type="text"> @KeyPressed </span>
-            <span id="TextGuess1Char3" type="text"> @KeyPressed </span>
-            <span id="TextGuess1Char4" type="text"> @KeyPressed </span>
-        </div>
+<div class="text-center" tabindex="0" @ref="docRef" @onkeydown=" KeyboardEventHandler ">
+    <h1 class="display-4">WordIe</h1>
+    <p>@guessResult</p>
 
-        <div>
+    @foreach (var item in attemptedGuesses)
+    {
+        @item
+        <br />
+    }
+
+    <div>
+        <span id="TextInputGuess" type="text"> @guess </span>
+    </div>
+
+    @*<div>
+        <p id="Attempt2">_____</p>
+        <p id="Attempt3">_____</p>
+        <p id="Attempt4">_____</p>
+        <p id="Attempt5">_____</p>
+        <p id="Attempt6">_____</p>
+    </div>*@
+
+
+    @*<div>
             <span id="TextGuess2Char0" type="text"> @KeyPressed </span>
             <span id="TextGuess2Char1" type="text"> @KeyPressed </span>
             <span id="TextGuess2Char2" type="text"> @KeyPressed </span>
@@ -49,35 +61,35 @@
             <span id="TextGuess6Char2" type="text"> @KeyPressed </span>
             <span id="TextGuess6Char3" type="text"> @KeyPressed </span>
             <span id="TextGuess6Char4" type="text"> @KeyPressed </span>
-        </div>
+        </div>*@
 
-        <div>
-            @foreach (var i in keyboard_toprow)
-            {
-                var letter = (char)i;
-                <button id="keyboard-@i" type="button" @onclick="@(() => KeyboardButtonPressed_Letter(letter))">@letter</button>
-            }
+    <div>
+        @foreach (var i in keyboard_toprow)
+        {
+            var letter = (char)i;
+            <button id="keyboard-@i" type="button" @onclick="@(() => KeyboardButtonPressed_Letter(letter))">@letter</button>
+        }
 
-            <br />
-            @foreach (var i in keyboard_midrow)
-            {
-                var letter = (char)i;
-                <button id="keyboard-@i" type="button" @onclick="@(() => KeyboardButtonPressed_Letter(letter))">@letter</button>
-            }
+        <br />
+        @foreach (var i in keyboard_midrow)
+        {
+            var letter = (char)i;
+            <button id="keyboard-@i" type="button" @onclick="@(() => KeyboardButtonPressed_Letter(letter))">@letter</button>
+        }
 
-            <br />
+        <br />
 
-            <button id="KeyboardEnter" @onclick="EnterPressed">Enter</button>
+        <button id="KeyboardEnter" @onclick="EnterPressed">Enter</button>
 
-            @foreach (var i in keyboard_botrow)
-            {
-                var letter = (char)i;
-                <button id="keyboard-@i" type="button" @onclick="@(() => KeyboardButtonPressed_Letter(letter))">@letter</button>
-            }
+        @foreach (var i in keyboard_botrow)
+        {
+            var letter = (char)i;
+            <button id="keyboard-@i" type="button" @onclick="@(() => KeyboardButtonPressed_Letter(letter))">@letter</button>
+        }
 
-            <button id="KeyboardBackspace" @onclick="BackspacePressed">Backspace</button>
-        </div>
+        <button id="KeyboardBackspace" @onclick="BackspacePressed">Backspace</button>
     </div>
+</div>
 
 @code {
 
@@ -86,6 +98,9 @@
     private ElementReference docRef;
     string KeyPressed = "";
     string guess = "";
+    string guessResult = "";
+
+    ArrayList attemptedGuesses = new ArrayList();
 
     int[] keyboard_toprow = new int[] { 113, 119, 101, 114, 116, 121, 117, 105, 111, 112 };
     int[] keyboard_midrow = new int[] { 097, 115, 100, 102, 103, 104, 106, 107, 108 };
@@ -106,7 +121,7 @@
 
         KeyPressed = args.Key;
 
-        if (args.Key.Length == 1)
+        if (args.Key.Length == 1 && wordieGame.isPlaying)
         {
             char letter = char.Parse(args.Key);
             bool isLetter = char.IsLetter(letter);
@@ -120,7 +135,7 @@
         }
 
 
-        if (args.Key == "Enter") {await EnterPressed();}
+        if (args.Key == "Enter") { await EnterPressed(); }
 
         if (args.Key == "Backspace") { await BackspacePressed(); }
 
@@ -131,7 +146,7 @@
     {
         KeyPressed = "Key Pressed is " + letter;
 
-        if (guess.Length < 5)
+        if (guess.Length < 5 && wordieGame.isPlaying)
         {
             guess += letter;
             Console.WriteLine(guess);
@@ -143,11 +158,42 @@
     {
         KeyPressed = "Key Pressed is enter from EnterPressed()";
 
-        if (guess.Length == 5)
+        if (guess.Length == 5 && wordieGame.isPlaying)
         {
             Console.WriteLine("enter: inputting guess");
+            wordieGame.makeGuess(guess);
+
+            // display result (temporary)
+            guessResult = wordieGame.result;
+
+            if (wordieGame.validGuess)
+            {
+                attemptedGuesses.Add(guess);
+
+                // reset guess
+                guess = "";
+
+                CheckGameState();
+            }
         }
     }
+
+    protected async Task CheckGameState()
+    {
+        if (wordieGame.isCorrect)
+        {
+            guessResult = "You Won!";
+            // todo: set up end screen (win)
+        }
+        else if (!wordieGame.isPlaying)
+        {
+            guessResult = "You Lose! The correct word was " + wordieGame.answer;
+            // todo: set up end screen (lose)
+        }
+
+
+    }
+
 
     protected async Task BackspacePressed()
     {

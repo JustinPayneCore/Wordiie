@@ -12,17 +12,20 @@ namespace Game.Components
         private static ArrayList possible_answers = new ArrayList() { "anime", "month", "class" };
         private static String[] possible_guesses = new string[] { "anime", "month", "class", "aisle", "wreck", "dodge", "never" };
 
-        private int wordsToGuess;
+        public int wordsToGuess;
 
         // Todo: uncomment if expanding wordie to more options
         // private ArrayList answers = new ArrayList();
 
-        public string answer;
+        public string answer { get; set; }
 
-        private int attempts = 6;
+        public int attempts = 6;
 
-        private bool isPlaying = true;
-        private bool isCorrect = false;
+        public bool validGuess = false;
+        public string result { get; set; }
+
+        public bool isPlaying = true;
+        public bool isCorrect = false;
 
         public WordieGame(int numOfWords)
         {
@@ -38,12 +41,13 @@ namespace Game.Components
             // create game board based on number of words to guess
             for (int i = 0; i < wordsToGuess; i++)
             {
-                int randomIndex = random.Next(possible_answers.Count);
+                int randomIndex = random.Next(possible_answers.Count + 1);
 
                 // todo: uncomment later if expanding wordie to more words
                 //answers.Add((string) possible_answers[randomIndex]);
 
                 answer = (string) possible_answers[randomIndex];
+                Console.WriteLine("Generated word: " + answer);
             }
 
             // add more attempts if more words
@@ -53,49 +57,56 @@ namespace Game.Components
 
         public void makeGuess(string input)
         {
-            int result = 0;
+            result = "";
 
-            if (possible_guesses.Contains(input)) {
+            validGuess = possible_guesses.Contains(input);
+
+            if (validGuess) {
                     for (int i = 0; i < input.Length; i++)
                     {
                         result += compareGuessLetterByLetter(input.Substring(i, 1), i);
-                        result = result * 10;
 
                         Console.WriteLine(result);
                     }
+            } else
+            {
+                Console.WriteLine("invalid guess.");
             }
 
             attempts--;
 
-            // result = 11111 => all correct guesses => game won
-            if (result == 11111)
+            // result = ccccc => all correct guesses => game won
+            if (result == "ccccc")
             {
                 isCorrect = true;
                 isPlaying = false;
+            } else
+            {
+                Console.WriteLine("Guess Again. result: " + result);
             }
 
             checkGameState();
         }
 
-        public int compareGuessLetterByLetter(string letter, int index)
+        public string compareGuessLetterByLetter(string letter, int index)
         {
             if (letter == answer.Substring(index, 1))
             {
                 // correct letter guess & position
-                // 1 = green
-                return 1;
+                // c = correct
+                return "c";
             }
 
             if (answer.Contains(letter))
             {
                 // letter is present but not in correct position
-                // 2 = yellow
-                return 2;
+                // p = yellow
+                return "p";
             } 
 
             // letter is incorrect
-            // 0 = grey
-            return 0;
+            // f = grey
+            return "f";
 
         }
 
