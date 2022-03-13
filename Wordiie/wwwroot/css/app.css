@@ -2,7 +2,7 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: black;
+    background-color: black
 }
 
 a, .btn-link {
@@ -51,15 +51,15 @@ a, .btn-link {
     }
 
 .letterInput {
-    background-color: grey;
+    background-color: white;
     max-inline-size: 50px;
     margin: 5px;
     outline-color: dimgrey;
     outline-style: double;
 }
 
-.text-center {
-    background-color: azure;
+#letters {
+    margin: 50px;
 }
 
 .keyboard {
